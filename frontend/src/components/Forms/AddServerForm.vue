@@ -52,7 +52,7 @@ const router = useRouter();
 const i18n = useI18n();
 const valid = ref(false);
 const previousServerLength = unref(remote.auth.servers.length);
-const serverUrl = ref('');
+const serverUrl = ref('https://play.eden.watch');
 const loading = ref(false);
 
 const rules = [
