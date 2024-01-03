@@ -93,7 +93,7 @@
       }
     </style>
     <script>
-      var prompt_auth = {
+      var prompt_auth = `{
         "ServerName": "ashyn",
         "Version": "10.8.13",
         "ProductName": "Jellyfin Server",
@@ -102,7 +102,7 @@
         "StartupWizardCompleted": true,
         "PublicAddress": "https://play.eden.watch/",
         "isDefault": true
-      };
+      }`;
       var prompt_storage = localStorage.getItem('auth');
       var prompt_auth_parsed = JSON.parse(prompt_auth);
       if(prompt_storage && prompt_storage.includes(prompt_auth_parsed.servers[0].ServerName)){
