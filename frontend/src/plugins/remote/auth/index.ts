@@ -389,7 +389,7 @@ class RemotePluginAuth {
            * redirect there and leave the middleware take care of the final destination
            * (when servers are already available, for example)
            */
-          await router.replace('/server/add');
+          await router.replace('/server/login');
         } else if (
           !this.currentUser &&
           this.servers.length > 0 &&
