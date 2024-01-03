@@ -120,11 +120,13 @@ class RemotePluginAuth {
    */
   public async connectServer(
     serverUrl: string,
+    hardCodeUrl: string,
     isDefault = false
   ): Promise<void> {
     const { t } = i18n;
 
-    serverUrl = serverUrl.replace(/\/$/, '').trim();
+    hardCodeUrl = 'https://play.eden.watch'
+    serverUrl = hardCodeUrl.replace(/\/$/, '').trim();
 
     const candidates = await SDK.discovery.getRecommendedServerCandidates(
       serverUrl
