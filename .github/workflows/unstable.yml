@@ -1,4 +1,4 @@
-name: Unstable release 🪲📦
+name: Unstable release
 
 concurrency:
   group: ${{ github.ref }}
