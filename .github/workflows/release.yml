@@ -40,9 +40,9 @@ jobs:
           build-args: |
             IS_STABLE=1
           tags: |
-            ghcr.io/jellyfin/jellyfin-vue:stable
-            ghcr.io/jellyfin/jellyfin-vue:stable.${{ github.event.release.tag_name }}
-            ghcr.io/jellyfin/jellyfin-vue:latest
+            ghcr.io/rukongai/jellyfin-vue:stable
+            ghcr.io/rukongai/jellyfin-vue:stable.${{ github.event.release.tag_name }}
+            ghcr.io/rukongai/jellyfin-vue:latest
 
       - name: Build and push release candidate images 🛠️⬆️
         if: github.event.action == 'prereleased'
@@ -55,5 +55,5 @@ jobs:
           build-args: |
             IS_STABLE=1
           tags: |
-            ghcr.io/jellyfin/jellyfin-vue:stable-rc
-            ghcr.io/jellyfin/jellyfin-vue:stable-rc.${{ github.event.release.tag_name }}
+            ghcr.io/rukongai/jellyfin-vue:stable-rc
+            ghcr.io/rukongai/jellyfin-vue:stable-rc.${{ github.event.release.tag_name }}

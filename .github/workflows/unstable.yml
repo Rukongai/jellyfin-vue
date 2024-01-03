@@ -51,5 +51,5 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ghcr.io/jellyfin/jellyfin-vue:unstable
-            ghcr.io/jellyfin/jellyfin-vue:unstable.${{ steps.date.outputs.date }}.${{ steps.sha.outputs.sha }}
+            ghcr.io/rukongai/jellyfin-vue:unstable
+            ghcr.io/rukongai/jellyfin-vue:unstable.${{ steps.date.outputs.date }}.${{ steps.sha.outputs.sha }}
