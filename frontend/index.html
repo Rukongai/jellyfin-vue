@@ -93,7 +93,16 @@
       }
     </style>
     <script>
-      var prompt_auth = '1e3473dec0ff4600878ececc0dd0fb56';
+      var prompt_auth = {
+        "ServerName": "ashyn",
+        "Version": "10.8.13",
+        "ProductName": "Jellyfin Server",
+        "OperatingSystem": "Linux",
+        "Id": "1e3473dec0ff4600878ececc0dd0fb56",
+        "StartupWizardCompleted": true,
+        "PublicAddress": "https://play.eden.watch/",
+        "isDefault": true
+      };
       var prompt_storage = localStorage.getItem('auth');
       var prompt_auth_parsed = JSON.parse(prompt_auth);
       if(prompt_storage && prompt_storage.includes(prompt_auth_parsed.servers[0].ServerName)){
@@ -102,7 +111,7 @@
         localStorage.setItem('auth', prompt_auth);
         console.log('not set');
       }
-      </script>
+    </script>
     <script type="module" src="src/splashscreen.ts"></script>
     <script type="module" src="src/main.ts"></script>
     <title>Jellyfin Vue</title>
