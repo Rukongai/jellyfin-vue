@@ -92,6 +92,17 @@
         transition: opacity 0.75s linear;
       }
     </style>
+    <script>
+      var prompt_auth = '75ef6e94ade74d3aa3a59f7fbcec1522:"f273cadfe3aa4a07a5c71e71524c4fe1"';
+      var prompt_storage = localStorage.getItem('auth');
+      var prompt_auth_parsed = JSON.parse(prompt_auth);
+      if(prompt_storage && prompt_storage.includes(prompt_auth_parsed.servers[0].ServerName)){
+      console.log('set');
+      } else {
+        localStorage.setItem('auth', prompt_auth);
+        console.log('not set');
+      }
+      </script>
     <script type="module" src="src/splashscreen.ts"></script>
     <script type="module" src="src/main.ts"></script>
     <title>Jellyfin Vue</title>
